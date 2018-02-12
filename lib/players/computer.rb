@@ -58,8 +58,8 @@ module Players
         end
         if c_cmb != nil #first check if computer has winning chance
            c_win = c_cmb.detect do |c| #check if computer can win (is there a winning combo occupied that has vacant cells?)
-             binding.pry
              c.detect do |c1|
+               binding.pry
                c2 = c1 + 1
                !board.taken?(c2.to_s)
              end
